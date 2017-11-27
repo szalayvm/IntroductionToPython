@@ -2,7 +2,7 @@
 Your chance to explore Loops and Turtles!
 
 Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
-         their colleagues and Victoria Szalay.
+         their colleagues and Victoria May Szalay.
 """
 ########################################################################
 # Done: 1.
