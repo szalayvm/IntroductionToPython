@@ -10,7 +10,7 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 ########################################################################
 
 ########################################################################
-# TODO: 2.
+# Done: 2.
 #
 #  You should have RUN the PREVIOUS module and READ its code.
 #  (Do so now if you have not already done so.)
@@ -31,27 +31,51 @@ Authors: David Mutchler, Dave Fisher, Valerie Galluzzi, Amanda Stouder,
 import rosegraphics as rg
 window = rg.TurtleWindow()
 
-Colleen = rg.SimpleTurtle()
-Colleen.pen = rg.Pen("midnight blue", 20)
+Colleen = rg.SimpleTurtle('turtle')
+Colleen.pen = rg.Pen('yellow', 3)
 Colleen.speed = 10
-Andrew = rg.SimpleTurtle()
-Andrew.pen = rg.Pen("turtle",40)
+Andrew = rg.SimpleTurtle('turtle')
+Andrew.pen = rg.Pen('green',3)
 Andrew.speed = 10
-Jade = rg.SimpleTurtle()
-Jade.pen = rg.Pen("turtle",40)
+Jade = rg.SimpleTurtle('turtle')
+Jade.pen = rg.Pen('red',3)
 Jade.speed = 10
-Will = rg.SimpleTurtle()
-Will.pen = rg.Pen("yellow",20)
+Will = rg.SimpleTurtle('turtle')
+Will.pen = rg.Pen('yellow',3)
 Will.speed = 10
 size = 200
 
-for k in range(13):
+for k in range(7):
+    Colleen.draw_square(size)
+
     Colleen.pen_up()
-    Colleen.draw_circle(size)
-    Colleen.backward(15)
+    Colleen.right(45)
+    Colleen.forward(10)
+    Colleen.left(45)
+
     Colleen.pen_down()
     size = size - 12
 
+for k in range(7):
+    Andrew.draw_circle(size)
 
-    window.close_mouse_click()
+    Andrew.pen_up()
+    Andrew.right(45)
+    Andrew.forward(10)
+    Andrew.left(45)
 
+    Andrew.pen_down()
+    size = size -12
+
+for k in range(7):
+    Jade.draw_regular_polygon(8,size)
+
+    Jade.pen_up()
+    Jade.right(45)
+    Jade.forward(10)
+    Jade.left(45)
+
+    Jade.pen_down()
+    size=size-12
+
+window.close_on_mouse_click()
